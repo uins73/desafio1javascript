@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Resueltos</title>
+    <link rel="stylesheet" href="css/stilos.css">
+</head>
+<body>
+    <header>
+        <h1>DESAFIO 1 JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="#ejercicio-6">Ejercicio 6</a>
+        <a href="#ejercicio-7">Ejercicio 7</a>
+        <a href="#ejercicio-8">Ejercicio 8</a>
+        <a href="#ejercicio-9">Ejercicio 9</a>
+        <a href="#ejercicio-10">Ejercicio 10</a>
+    </nav>
+    <section id="ejercicio-6">
+        <h2>Ejercicio 6</h2>
+        <p>Define la variable z como z = 4.5; luego evalúa:</p>
+        <p>(a) (0.4 * z**4) + (3.1 * z**2) - (162.3 * z) - 80.7
+        <div class="solution">
+            Resultado:<p id="resultado6ha"></p>
+        </div>
+        <p>(b) (z**3 - 23) / (Math.pow(z**2 + 17.5,1/3))</p>
+        <div class="solution">
+            Resultado:<p id="resultado6hb"></p>
+        </div>
+    </section>
+    <script>
+        var z=4.5;
+        const resultado6a=(0.4 * z**4) + (3.1 * z**2) - (162.3 * z) - 80.7;
+        document.getElementById("resultado6ha").innerHTML = resultado6a;
+        const resultado6b = (z**3 - 23) / (Math.pow(z**2 + 17.5,1/3));
+        document.getElementById("resultado6hb").innerHTML = resultado6b;
+    </script>
+    <section id="ejercicio-7">
+        <h2>Ejercicio 7</h2>
+        <p>Define la variable t como t = 3.2$; luego evalúa:</p>
+        <p>(a) (1/2)*epsilon**(2*t)-3.81*t**3</p>
+        <div class="solution">
+            Resultado: <p id="resultado7ha"></p>
+        </div>
+        <p>(b) (6*t**2+6*t-2)/(t**2-1)</p>
+        <div class="solution">
+            Resultado: <p id="resultado7hb"></p>
+        </div>
+    </section>
+    <script>
+        var t=3.2;
+        const epsilon = 2.718281828;
+        const resultado7a=(1/2)*epsilon**(2*t)-3.81*t**3;
+        const resultado7b=(6*t**2+6*t-2)/(t**2-1);
+        document.getElementById("resultado7ha").innerHTML = resultado7a;
+        document.getElementById("resultado7hb").innerHTML = resultado7b;
+    </script>
+    <section id="ejercicio-8">
+        <h2>Ejercicio 8</h2>
+        <p>Define las variables x = 6.5 e y = 3.8; luego evalúa:</p>
+        <p>(a) (Math.pow(x**2 + y**2, 2/3)) + (x * y) / (y - x)</p>
+        <div class="solution">
+            Resultado: <p id="resultado8ha"></p>
+        </div>
+        <p>(b)Math.sqrt(x + y) / Math.pow(x - y, 2) + 2 * Math.pow(x, 2) - x * Math.pow(y, 2)</p>
+        <div class="solution">
+            Resultado: <p id="resultado8hb"></p>
+        </div>
+    </section>
+    <script>
+        var x=6.5;
+        var y=3.8;
+        const resultado8a = (Math.pow(x**2 + y**2, 2/3)) + (x * y) / (y - x);
+        const resultado8b = Math.sqrt(x + y) / Math.pow(x - y, 2) + 2 * Math.pow(x, 2) - x * Math.pow(y, 2);
+        document.getElementById("resultado8ha").innerHTML = resultado8a;
+        document.getElementById("resultado8hb").innerHTML = resultado8b;
+    </script>
+    <section id="ejercicio-9">
+        <h2>Ejercicio 9</h2>
+        <p>Define las variables c = 4.6, d = 1.7, a = cd**2 y b = (c+a)/c-d; luego evalúa:</p>
+        <p>(a) epsilon**(d-b)+(Math.pow(c+a,1/3))-(c*a)**d</p>
+        <div class="solution">
+            Resultado: <p id="resultado9ha"></p>
+        </div>
+        <p>(b) (d/c)+((c*t)/b)**2-c**d-(a/b)</p>
+        <div class="solution">
+            Resultado: <p id="resultado9hb"></p>
+        </div>
+    </section>
+    <script>
+        var c=4.6;
+        var d=1.7;
+        var a=c*d**2;
+        var b=(c+a)/(c-d);
+        const resultado9a = epsilon**(d-b)+(Math.pow(c+a,1/3))-(c*a)**d;
+        const resultado9b = (d/c)+((c*t)/b)**2-c**d-(a/b);
+        document.getElementById("resultado9ha").innerHTML = resultado9a;
+        document.getElementById("resultado9hb").innerHTML = resultado9b;
+    </script>
+    <section id="ejercicio-10">
+        <h2>Ejercicio 10</h2>
+        <p>Dos identidades trigonométricas están dadas por: x es igual a pi/10</p>
+        <p>(a) Math.pow(Math.cos(x), 2) - Math.pow(Math.sin(x), 2) == 1 -2*( Math.pow(Math.sin(x), 2))</p>
+        <div class="solution">
+            Resultado: <span id="resultado10hb"></span> == <span id="resultado10hb2"></span>
+            <p id="resultado10har"></p>
+        </div>
+        <p>(b) (Math.tan(x))/((Math.sin(ñ)-2*Math.tan(x))) == 1/((Math.cos(x)-2))</p>
+        <div class="solution">
+            Resultado: <span id="resultado10ha"></span> == <span id="resultado10ha2"></span>
+            <p id="resultado10hbr"></p>
+        </div>
+    </section>
+    <script>
+        var ñ = 0.3141592654;
+        const resultado10a = Math.pow(Math.cos(ñ), 2) - Math.pow(Math.sin(ñ), 2);
+        document.getElementById("resultado10hb").innerHTML = resultado10a.toFixed(5); 
+        const resultado10a2 = 1 -2*( Math.pow(Math.sin(ñ), 2));
+        document.getElementById("resultado10hb2").innerHTML = resultado10a2.toFixed(5);
+        if (resultado10a===resultado10a2){
+            document.getElementById("resultado10har").innerHTML ="la identidad es correcta";
+        }
+        else{
+            document.getElementById("resultado10har").innerHTML ="la identidad no es correcta";
+        }
+        const resultado10b = (Math.tan(ñ))/((Math.sin(ñ)-2*Math.tan(ñ)));
+        document.getElementById("resultado10ha").innerHTML = resultado10b.toFixed(5); 
+        const resultado10b2 = 1/((Math.cos(ñ)-2));
+        document.getElementById("resultado10ha2").innerHTML = resultado10b2.toFixed(5);
+        if (resultado10b===resultado10b2){
+            document.getElementById("resultado10hbr").innerHTML ="la identidad es correcta";
+        }
+        else{
+            document.getElementById("resultado10hbr").innerHTML ="la identidad no es correcta";
+        }   
+    </script>
+    <footer>
+        <p>&copy;Ejercicios Resueltos</p>
+    </footer>
+</body>
+</html>
